@@ -1,7 +1,7 @@
 FROM python:3.13
 
 COPY . /ORT
-RUN pip install -r requirements.txt
+RUN pip install -r ./requirements.txt
 
 ENV \
     LISEN_IP="0.0.0.0" \
