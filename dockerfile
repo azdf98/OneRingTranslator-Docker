@@ -1,16 +1,16 @@
 FROM python:3.13
 
-COPY . /ORT
-WORKDIR /ORT
+COPY . /ort
+WORKDIR /ort
 RUN pip install -r ./requirements.txt
 
 ENV \
-    LISSEN_IP="0.0.0.0" \
-    PORT=4990
+    ORT_LISTEN_IP="0.0.0.0" \
+    ORT_PORT=4990
 
 EXPOSE 4990
 
-VOLUME /ORT/Option
+VOLUME /ort/options
 
-ENTRYPOINT python ./run_webapi.py
+CMD python ./run_webapi.py
 
