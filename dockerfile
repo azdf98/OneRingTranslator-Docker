@@ -12,5 +12,5 @@ EXPOSE 4990
 
 VOLUME /ORT/Option
 
-ENTRYPOINT
+ENTRYPOINT ./run_webapi.py
 
