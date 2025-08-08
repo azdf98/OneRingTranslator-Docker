@@ -166,4 +166,4 @@ async def whois():
 if __name__ == "__main__":
     #multiprocessing.freeze_support()
     print("Running OneRingTranslator v{0}, web server v{1}...".format(version, webapi_version))
-    uvicorn.run("run_webapi:app", host=os.getenv("LISSEN_IP"), port=os.getenv("PORT"), log_level="info")
+    uvicorn.run("run_webapi:app", host=os.getenv("LISSEN_IP"), port=int(os.getenv("PORT")), log_level="info")
