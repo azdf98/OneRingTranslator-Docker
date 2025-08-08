@@ -3,6 +3,7 @@ FROM python:3.13
 COPY . /ORT
 WORKDIR /ORT
 RUN pip install -r ./requirements.txt
+RUN chmod +x ./run_webapi.py
 
 ENV \
     LISSEN_IP="0.0.0.0" \
