@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.13
 
 COPY . /ORT
 RUN pip install -r requirements.txt
